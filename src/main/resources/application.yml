@@ -1,3 +1,7 @@
 server:
  servlet:
     context-path: /ovos-galinhas/api
+    
+springdoc:
+  swagger-ui:
+    path: /swagger
