@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
+import br.com.fazendapoedeiras.ovosgalinhas.galinha.application.api.GalinhaRequest;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -31,10 +32,11 @@ public class Galinha {
 	private LocalDateTime dataHoraDoCadastro;
 	private LocalDateTime dataHoraDaUltimaAlteracao;
 	
-	public Galinha(@NotBlank String nomeGalinha, @NotNull LocalDate dataDeNascimento) {
-		this.nomeGalinha = nomeGalinha;
-		this.dataDeNascimento = dataDeNascimento;
+	public Galinha(GalinhaRequest galinhaRequest) {
+		this.nomeGalinha = galinhaRequest.getNomeGalinha();
+		this.dataDeNascimento = galinhaRequest.getDataDeNascimento();
 		this.dataHoraDoCadastro = LocalDateTime.now();
+		
 	}
 	
 }
