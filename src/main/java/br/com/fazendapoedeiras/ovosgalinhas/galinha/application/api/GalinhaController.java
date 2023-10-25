@@ -1,5 +1,7 @@
 package br.com.fazendapoedeiras.ovosgalinhas.galinha.application.api;
 
+import java.util.List;
+
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.fazendapoedeiras.ovosgalinhas.galinha.application.service.GalinhaService;
@@ -19,4 +21,11 @@ public class GalinhaController implements GalinhaAPI {
 		log.info("[finaliza] GalinhaController - postGalinha");
 		return galinhaCriada;
 		}
+
+	@Override
+	public List<GalinhaListResponse> getTodasGalinhas() {
+		log.info("[inicia] GalinhaController - getTodasGalinhas");
+		log.info("[finaliza] GalinhaController - getTodasGalinhas");
+		return null;
+	}
 }
