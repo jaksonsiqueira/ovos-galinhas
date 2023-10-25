@@ -25,7 +25,8 @@ public class GalinhaController implements GalinhaAPI {
 	@Override
 	public List<GalinhaListResponse> getTodasGalinhas() {
 		log.info("[inicia] GalinhaController - getTodasGalinhas");
+		List<GalinhaListResponse> galinhas = galinhaService.buscaTodasGalinhas();
 		log.info("[finaliza] GalinhaController - getTodasGalinhas");
-		return null;
+		return galinhas;
 	}
 }

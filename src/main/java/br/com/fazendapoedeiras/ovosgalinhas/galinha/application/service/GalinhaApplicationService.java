@@ -1,7 +1,10 @@
 package br.com.fazendapoedeiras.ovosgalinhas.galinha.application.service;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
+import br.com.fazendapoedeiras.ovosgalinhas.galinha.application.api.GalinhaListResponse;
 import br.com.fazendapoedeiras.ovosgalinhas.galinha.application.api.GalinhaRequest;
 import br.com.fazendapoedeiras.ovosgalinhas.galinha.application.api.GalinhaResponse;
 import br.com.fazendapoedeiras.ovosgalinhas.galinha.application.repository.GalinhaRepository;
@@ -20,5 +23,11 @@ public class GalinhaApplicationService implements GalinhaService {
 		Galinha galinha = galinhaRepository.salva(new Galinha(galinhaRequest));
 		log.info("[finaliza] GalinhaApplicationService - criaGalinha");
 		return new GalinhaResponse(galinha);
+	}
+	@Override
+	public List<GalinhaListResponse> buscaTodasGalinhas() {
+		log.info("[inicia] GalinhaApplicationService - buscaTodasGalinhas");
+		log.info("[finaliza] GalinhaApplicationService - buscaTodasGalinhas");
+		return null;
 	}
 }
