@@ -2,11 +2,16 @@ package br.com.fazendapoedeiras.ovosgalinhas.galinha.application.api;
 
 import java.util.UUID;
 
-import lombok.Builder;
-import lombok.Value;
+import br.com.fazendapoedeiras.ovosgalinhas.galinha.domain.Galinha;
+import lombok.Getter;
+import lombok.ToString;
 
-@Value
-@Builder
+@Getter
+@ToString
 public class GalinhaResponse {
 	private UUID idGalinha;
+	
+	public GalinhaResponse(Galinha galinha) { 
+		this.idGalinha = galinha.getIdGalinha();
+	}
 }

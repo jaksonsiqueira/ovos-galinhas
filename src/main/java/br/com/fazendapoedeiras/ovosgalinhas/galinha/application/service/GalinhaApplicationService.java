@@ -19,8 +19,6 @@ public class GalinhaApplicationService implements GalinhaService {
 		log.info("[inicia] GalinhaApplicationService - criaGalinha");
 		Galinha galinha = galinhaRepository.salva(new Galinha(galinhaRequest));
 		log.info("[finaliza] GalinhaApplicationService - criaGalinha");
-		return GalinhaResponse.builder()
-				.idGalinha(galinha.getIdGalinha())
-				.build();
+		return new GalinhaResponse(galinha);
 	}
 }
