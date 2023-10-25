@@ -1,5 +1,7 @@
 package br.com.fazendapoedeiras.ovosgalinhas.galinha.infra;
 
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 
 import br.com.fazendapoedeiras.ovosgalinhas.galinha.application.repository.GalinhaRepository;
@@ -19,6 +21,13 @@ public class GalinhaInfraRepository implements GalinhaRepository {
 		galinhaSpringDataJPARepository.save(galinha);
 		log.info("[finaliza] GalinhaInfraRepository - salva");
 		return galinha;
+	}
+
+	@Override
+	public List<Galinha> buscaTodasGalinhas() {
+		log.info("[inicia] GalinhaInfraRepository - buscaTodasGalinhas");
+		log.info("[finaliza] GalinhaInfraRepository - buscaTodasGalinhas");
+		return null;
 	}
 
 }
