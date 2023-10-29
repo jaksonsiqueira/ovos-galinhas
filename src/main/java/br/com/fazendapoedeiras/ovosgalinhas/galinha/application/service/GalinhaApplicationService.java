@@ -40,4 +40,12 @@ public class GalinhaApplicationService implements GalinhaService {
 		log.info("[finaliza] GalinhaApplicationService - buscaGalinhaPorId");
 		return new GalinhaDetalhadaResponse(galinha);		
 	}
+	@Override
+	public void deletaGalinhaPorId(UUID idGalinha) {
+		log.info("[inicia] GalinhaApplicationService - deletaGalinhaPorId");
+		Galinha galinha = galinhaRepository.buscaGalinhaPorId(idGalinha);
+		galinhaRepository.deletaGalinha(galinha);
+		log.info("[finaliza] GalinhaApplicationService - deletaGalinhaPorId");
+		
+	}
 }

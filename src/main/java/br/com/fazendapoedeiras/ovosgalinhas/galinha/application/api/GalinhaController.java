@@ -44,6 +44,7 @@ public class GalinhaController implements GalinhaAPI {
 	public void deletaGalinhaPorId(UUID idGalinha) {
 		log.info("[inicia] GalinhaController - deletaGalinhaPorId");
 		log.info("[idGalinha]{}", idGalinha);
+		galinhaService.deletaGalinhaPorId(idGalinha);
 		log.info("[finaliza] GalinhaController - deletaGalinhaPorId");
 		
 	}

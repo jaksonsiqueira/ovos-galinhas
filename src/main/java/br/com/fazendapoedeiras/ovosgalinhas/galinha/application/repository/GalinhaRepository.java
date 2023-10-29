@@ -9,4 +9,5 @@ public interface GalinhaRepository {
 	Galinha salva(Galinha galinha);
 	List<Galinha> buscaTodasGalinhas();
 	Galinha buscaGalinhaPorId(UUID idGalinha);
+	void deletaGalinha(Galinha galinha);
 }
