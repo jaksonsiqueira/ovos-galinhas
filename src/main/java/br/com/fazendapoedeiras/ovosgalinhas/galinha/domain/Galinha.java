@@ -27,6 +27,7 @@ public class Galinha {
 	@Column(columnDefinition = "uuid", name = "idGalinha", updatable = false, unique = true, nullable = false)
 	private UUID idGalinha;
 	@NotBlank
+	@Column(unique = true)
 	private String nomeGalinha;
 	@NotNull
 	private LocalDate dataDeNascimento;
