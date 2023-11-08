@@ -6,6 +6,7 @@ import java.util.UUID;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.fazendapoedeiras.ovosgalinhas.galinha.application.service.GalinhaService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 
@@ -47,5 +48,12 @@ public class GalinhaController implements GalinhaAPI {
 		galinhaService.deletaGalinhaPorId(idGalinha);
 		log.info("[finaliza] GalinhaController - deletaGalinhaPorId");
 		
+	}
+
+	@Override
+	public void patchGalinha(UUID idGalinha, @Valid GalinhaRequest galinhaRequest) {
+		log.info("[inicia] GalinhaController - patchGalinha");
+		log.info("[idGalinha]{}", idGalinha);
+		log.info("[finaliza] GalinhaController - patchGalinha");
 	}
 }
