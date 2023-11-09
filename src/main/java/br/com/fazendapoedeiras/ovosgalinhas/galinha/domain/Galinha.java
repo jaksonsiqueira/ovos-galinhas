@@ -40,5 +40,12 @@ public class Galinha {
 		this.dataHoraDoCadastro = LocalDateTime.now();
 		
 	}
+
+	public void altera(GalinhaRequest galinhaRequest) {
+		this.nomeGalinha = galinhaRequest.getNomeGalinha();
+		this.dataDeNascimento = galinhaRequest.getDataDeNascimento();
+		this.dataHoraDaUltimaAlteracao = LocalDateTime.now();
+		
+	}
 	
 }

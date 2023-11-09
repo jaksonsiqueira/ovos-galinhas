@@ -54,6 +54,7 @@ public class GalinhaController implements GalinhaAPI {
 	public void patchGalinha(UUID idGalinha, @Valid GalinhaRequest galinhaRequest) {
 		log.info("[inicia] GalinhaController - patchGalinha");
 		log.info("[idGalinha]{}", idGalinha);
+		galinhaService.patchGalinha(idGalinha, galinhaRequest);
 		log.info("[finaliza] GalinhaController - patchGalinha");
 	}
 }

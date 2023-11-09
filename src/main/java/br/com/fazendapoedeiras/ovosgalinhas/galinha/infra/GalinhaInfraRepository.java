@@ -46,9 +46,8 @@ public class GalinhaInfraRepository implements GalinhaRepository {
 	@Override
 	public void deletaGalinha(Galinha galinha) {
 		log.info("[inicia] GalinhaInfraRepository - deletaGalinha");
-		galinhaSpringDataJPARepository.delete(galinha);	
+		galinhaSpringDataJPARepository.delete(galinha);
 		log.info("[finaliza] GalinhaInfraRepository - deletaGalinha");
-		
-	}
 
+	}
 }

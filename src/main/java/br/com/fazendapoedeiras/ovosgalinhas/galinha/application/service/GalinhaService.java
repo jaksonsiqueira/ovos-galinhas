@@ -13,5 +13,6 @@ public interface GalinhaService {
 	List<GalinhaListResponse> buscaTodasGalinhas();
 	GalinhaDetalhadaResponse buscaGalinhaPorId(UUID idGalinha);
 	void deletaGalinhaPorId(UUID idGalinha);
+	void patchGalinha(UUID idGalinha,GalinhaRequest galinhaRequest);
 	
 }
