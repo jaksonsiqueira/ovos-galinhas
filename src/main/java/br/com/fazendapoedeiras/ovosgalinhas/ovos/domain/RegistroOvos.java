@@ -1,4 +1,4 @@
-package br.com.fazendapoedeiras.ovosgalinhas.ovo.domain;
+package br.com.fazendapoedeiras.ovosgalinhas.ovos.domain;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
