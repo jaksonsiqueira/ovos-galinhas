@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+
 import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/v1/galinha/{idGalinha}/ovos")
-public interface RegistroOvosAPI {
+public interface RegistroDeOvosAPI {
 	@PostMapping
 	@ResponseStatus(code = HttpStatus.CREATED)
-	RegistroOvosResponse postRegistroOvos(@PathVariable UUID idGalinha, @Valid @RequestBody RegistroOvosRequest registroOvosRequest);
-
+	RegistroDeOvosResponse postRegistroDeOvos(@PathVariable UUID idGalinha,@Valid @RequestBody RegistroDeOvosRequest registroDeOvosRequest);
 }

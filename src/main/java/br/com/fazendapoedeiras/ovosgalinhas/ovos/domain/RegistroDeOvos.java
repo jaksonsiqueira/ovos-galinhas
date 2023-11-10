@@ -9,7 +9,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -20,20 +19,17 @@ import lombok.ToString;
 @Getter
 @ToString
 @Entity
-public class RegistroOvos {
+public class RegistroDeOvos {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(columnDefinition = "uuid", name = "idOvos", updatable = false, unique = true, nullable = false)
-	private UUID idOvos;
+	@Column(columnDefinition = "uuid", name = "idRegistroDeOvos", updatable = false, unique = true, nullable = false)
+	private UUID idRegistroDeOvos;
 	@NotNull
-	private LocalDate dataDosOvosChocados;
-	@NotNull
-	@Min(value = 0)
 	private Integer quantidadeDeOvos;
-
+	@NotNull
+	private LocalDate dataRegistroChocados;
+	
 	private LocalDateTime dataHoraDoCadastro;
 	private LocalDateTime dataHoraDaUltimaAlteracao;
-	
 
-	
 }

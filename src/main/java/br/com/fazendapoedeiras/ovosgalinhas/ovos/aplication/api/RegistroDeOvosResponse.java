@@ -7,8 +7,6 @@ import lombok.ToString;
 
 @Getter
 @ToString
-public class RegistroOvosResponse {
-	
-	private UUID idOvos;
-
+public class RegistroDeOvosResponse {
+	private UUID idRegistroDeOvos;
 }
