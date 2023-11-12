@@ -28,8 +28,9 @@ public class RegistroDeOvosController implements RegistroDeOvosAPI {
 	public List<RegistroDeOvosGalinhaListResponse> getTodasRegistroDeOvosGalinhaComId(UUID idGalinha) {
 		log.info("[inicia]RegistroDeOvosController - getTodasRegistroDeOvosGalinhaComId");
 		log.info("[idGalinha]{}", idGalinha);
+		List<RegistroDeOvosGalinhaListResponse> registrosDeOvosDaGalinha = registroDeOvosService.buscaRegistrosDeOvosDaGalinhaComId(idGalinha);
 		log.info("[finaliza]RegistroDeOvosController - getTodasRegistroDeOvosGalinhaComId");
-		return null;
+		return registrosDeOvosDaGalinha;
 	}
 
 }
