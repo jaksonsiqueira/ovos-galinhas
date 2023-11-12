@@ -1,5 +1,8 @@
 package br.com.fazendapoedeiras.ovosgalinhas.ovos.infra;
 
+import java.util.List;
+import java.util.UUID;
+
 import org.springframework.stereotype.Repository;
 
 import br.com.fazendapoedeiras.ovosgalinhas.ovos.aplication.service.RegistroDeOvosRepository;
@@ -19,6 +22,14 @@ public class RegistroDeOvosInfraRepository implements RegistroDeOvosRepository {
 		registroDeOvosSpringDataJPARepository.save(registroDeOvos);
 		log.info("[finaliza]RegistroDeOvosInfraRepository - salvaRegistroDeOvos");
 		return registroDeOvos;
+	}
+
+	@Override
+	public List<RegistroDeOvos> buscaRegistrosDeOvosDaGalinhaComId(UUID idGalinha) {
+		log.info("[inicia]RegistroDeOvosInfraRepository - buscaRegistrosDeOvosDaGalinhaComId");
+		var todosRegistroDeOvos = registroDeOvosSpringDataJPARepository.findByIdGalinha(idGalinha);
+		log.info("[finaliza]RegistroDeOvosInfraRepository - buscaRegistrosDeOvosDaGalinhaComId");
+		return todosRegistroDeOvos;
 	}
 
 }

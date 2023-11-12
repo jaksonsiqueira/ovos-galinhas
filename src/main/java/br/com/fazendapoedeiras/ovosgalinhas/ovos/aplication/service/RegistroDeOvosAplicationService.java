@@ -32,8 +32,10 @@ public class RegistroDeOvosAplicationService implements RegistroDeOvosService {
 	@Override
 	public List<RegistroDeOvosGalinhaListResponse> buscaRegistrosDeOvosDaGalinhaComId(UUID idGalinha) {
 		log.info("[inicia]RegistroDeOvosAplicationService - buscaRegistrosDeOvosDaGalinhaComId ");
+		galinhaService.buscaGalinhaPorId(idGalinha);
+		List<RegistroDeOvos> registroDeOvos = registroDeOvosRepository.buscaRegistrosDeOvosDaGalinhaComId(idGalinha);
 		log.info("[finaliza]RegistroDeOvosAplicationService - buscaRegistrosDeOvosDaGalinhaComId ");
-		return null;
+		return RegistroDeOvosGalinhaListResponse.convert(registroDeOvos);
 	}
 
 }
