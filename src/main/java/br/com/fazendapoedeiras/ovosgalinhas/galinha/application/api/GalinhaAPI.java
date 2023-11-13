@@ -22,20 +22,21 @@ public interface GalinhaAPI {
 	@PostMapping
 	@ResponseStatus(code = HttpStatus.CREATED)
 	GalinhaResponse postGalinha(@Valid @RequestBody GalinhaRequest galinhaRequest);
-	
+
 	@GetMapping
 	@ResponseStatus(code = HttpStatus.OK)
 	List<GalinhaListResponse> getTodasGalinhas();
-	
+
 	@GetMapping(value = "/{idGalinha}")
 	@ResponseStatus(code = HttpStatus.OK)
-	GalinhaDetalhadaResponse getGalinhaPorId(@PathVariable UUID idGalinha);
-	
+	GalinhaDetalhadaResponse getGalinhaPorId(UUID idGalinha);
+
 	@DeleteMapping(value = "/{idGalinha}")
 	@ResponseStatus(code = HttpStatus.NO_CONTENT)
 	void deletaGalinhaPorId(@PathVariable UUID idGalinha);
-	
+
 	@PatchMapping(value = "/{idGalinha}")
 	@ResponseStatus(code = HttpStatus.NO_CONTENT)
 	void patchGalinha(@PathVariable UUID idGalinha, @Valid @RequestBody GalinhaRequest galinhaRequest);
+
 }
