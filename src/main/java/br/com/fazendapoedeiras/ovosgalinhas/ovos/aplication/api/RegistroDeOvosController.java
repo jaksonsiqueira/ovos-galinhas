@@ -51,4 +51,12 @@ public class RegistroDeOvosController implements RegistroDeOvosAPI {
 		
 	}
 
+	@Override
+	public void patchRegistroDeOvosPorId(UUID idGalinha, UUID idRegistroDeOvos, RegistroDeOvosRequest registroDeOvosRequest) {
+		log.info("[inicia]RegistroDeOvosController - patchRegistroDeOvosPorId");
+		log.info("[idGalinha]{} - [idRegistroDeOvos]{}", idGalinha, idRegistroDeOvos);
+		registroDeOvosService.patchRegistroDeOvos(idGalinha, idRegistroDeOvos, registroDeOvosRequest);
+		log.info("[finaliza]RegistroDeOvosController - patchRegistroDeOvosPorId");
+	}
+
 }

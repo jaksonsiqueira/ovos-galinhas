@@ -59,4 +59,16 @@ public class RegistroDeOvosAplicationService implements RegistroDeOvosService {
 		
 	}
 
+	@Override
+	public void patchRegistroDeOvos(UUID idGalinha, UUID idRegistroDeOvos,
+			RegistroDeOvosRequest registroDeOvosRequest) {
+		log.info("[inicia]RegistroDeOvosAplicationService - patchRegistroDeOvosPorId ");
+		galinhaService.buscaGalinhaPorId(idGalinha);
+		RegistroDeOvos registroDeOvos = registroDeOvosRepository.buscaRegistroDeOvos(idRegistroDeOvos);
+		registroDeOvos.alteraRegistroDeOvos(registroDeOvosRequest);
+		registroDeOvosRepository.salvaRegistroDeOvos(registroDeOvos);
+		log.info("[finaliza]RegistroDeOvosAplicationService - patchRegistroDeOvosPorId ");
+		
+	}
+
 }

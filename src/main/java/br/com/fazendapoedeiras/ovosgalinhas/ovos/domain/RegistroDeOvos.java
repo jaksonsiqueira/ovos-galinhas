@@ -43,4 +43,10 @@ public class RegistroDeOvos {
 		this.dataRegistroChocados = registroDeOvosRequest.getDataRegistroChocados();
 		this.dataHoraDoCadastro = LocalDateTime.now();
 	}
+
+	public void alteraRegistroDeOvos(RegistroDeOvosRequest registroDeOvosRequest) {
+		this.quantidadeDeOvos = registroDeOvosRequest.getQuantidadeDeOvos();
+		this.dataRegistroChocados = registroDeOvosRequest.getDataRegistroChocados();
+		this.dataHoraDaUltimaAlteracao = LocalDateTime.now();
+	}
 }
