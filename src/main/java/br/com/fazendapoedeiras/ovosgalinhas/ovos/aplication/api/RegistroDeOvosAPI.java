@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.UUID;
 
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -29,6 +30,11 @@ public interface RegistroDeOvosAPI {
 	@GetMapping(value = "/{idRegistroDeOvos}")
 	@ResponseStatus(code = HttpStatus.OK)
 	RegistroDeOvosDetalhadoResponse getRegistroDeOvosPorId(@PathVariable UUID idGalinha, 
+			@PathVariable UUID idRegistroDeOvos);
+	
+	@DeleteMapping(value = "/{idRegistroDeOvos}")
+	@ResponseStatus(code = HttpStatus.NO_CONTENT)
+	void deletaRegistroDeOvosPorId(@PathVariable UUID idGalinha, 
 			@PathVariable UUID idRegistroDeOvos);
 }
 

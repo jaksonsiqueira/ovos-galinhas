@@ -13,6 +13,7 @@ public interface RegistroDeOvosService {
 	RegistroDeOvosResponse criaRegistroDeOvos(UUID idGalinha, RegistroDeOvosRequest registroDeOvosRequest);
 	List<RegistroDeOvosGalinhaListResponse> buscaRegistrosDeOvosDaGalinhaComId(UUID idGalinha);
 	RegistroDeOvosDetalhadoResponse buscaRegistroDeOvosDaGalinhaComId(UUID idGalinha, UUID idRegistroDeOvos);
+	void deletaRegistroDeOvosPorId(UUID idGalinha, UUID idRegistroDeOvos);
 	
 
 }

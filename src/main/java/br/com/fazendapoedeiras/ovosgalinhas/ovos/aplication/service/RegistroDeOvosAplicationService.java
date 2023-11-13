@@ -49,4 +49,14 @@ public class RegistroDeOvosAplicationService implements RegistroDeOvosService {
 		return new RegistroDeOvosDetalhadoResponse(registroDeOvos) ;
 	}
 
+	@Override
+	public void deletaRegistroDeOvosPorId(UUID idGalinha,UUID idRegistroDeOvos) {
+		log.info("[inicia]RegistroDeOvosAplicationService - deletaRegistroDeOvosPorId ");
+		galinhaService.buscaGalinhaPorId(idGalinha);
+		RegistroDeOvos registroDeOvos = registroDeOvosRepository.buscaRegistroDeOvos(idRegistroDeOvos);
+		registroDeOvosRepository.deletaRgistroDeOvos(registroDeOvos);
+		log.info("[finaliza]RegistroDeOvosAplicationService - deletaRegistroDeOvosPorId ");
+		
+	}
+
 }

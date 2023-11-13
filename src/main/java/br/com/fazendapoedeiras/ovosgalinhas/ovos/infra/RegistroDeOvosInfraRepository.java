@@ -44,4 +44,12 @@ public class RegistroDeOvosInfraRepository implements RegistroDeOvosRepository {
 		return registroDeOvos;
 	}
 
+	@Override
+	public void deletaRgistroDeOvos(RegistroDeOvos registroDeOvos) {
+		log.info("[inicia]RegistroDeOvosInfraRepository - deletaRgistroDeOvo");
+		registroDeOvosSpringDataJPARepository.delete(registroDeOvos);
+		log.info("[finaliza]RegistroDeOvosInfraRepository - deletaRgistroDeOvo");
+		
+	}
+
 }
