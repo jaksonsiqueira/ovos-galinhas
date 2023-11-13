@@ -6,6 +6,7 @@ import java.util.UUID;
 import org.springframework.stereotype.Service;
 
 import br.com.fazendapoedeiras.ovosgalinhas.galinha.application.service.GalinhaService;
+import br.com.fazendapoedeiras.ovosgalinhas.ovos.aplication.api.RegistroDeOvosDetalhadoResponse;
 import br.com.fazendapoedeiras.ovosgalinhas.ovos.aplication.api.RegistroDeOvosGalinhaListResponse;
 import br.com.fazendapoedeiras.ovosgalinhas.ovos.aplication.api.RegistroDeOvosRequest;
 import br.com.fazendapoedeiras.ovosgalinhas.ovos.aplication.api.RegistroDeOvosResponse;
@@ -37,6 +38,13 @@ public class RegistroDeOvosAplicationService implements RegistroDeOvosService {
 		List<RegistroDeOvos> registroDeOvos = registroDeOvosRepository.buscaRegistrosDeOvosDaGalinhaComId(idGalinha);
 		log.info("[finaliza]RegistroDeOvosAplicationService - buscaRegistrosDeOvosDaGalinhaComId ");
 		return RegistroDeOvosGalinhaListResponse.convert(registroDeOvos);
+	}
+
+	@Override
+	public RegistroDeOvosDetalhadoResponse buscaRegistroDeOvosDaGalinhaComId(UUID idGalinha, UUID idRegistroDeOvos) {
+		log.info("[inicia]RegistroDeOvosAplicationService - buscaRegistroDeOvosDaGalinhaComId ");
+		log.info("[finaliza]RegistroDeOvosAplicationService - buscaRegistroDeOvosDaGalinhaComId ");
+		return null;
 	}
 
 }
