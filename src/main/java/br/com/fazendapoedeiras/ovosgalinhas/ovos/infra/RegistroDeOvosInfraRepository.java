@@ -3,8 +3,10 @@ package br.com.fazendapoedeiras.ovosgalinhas.ovos.infra;
 import java.util.List;
 import java.util.UUID;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Repository;
 
+import br.com.fazendapoedeiras.ovosgalinhas.handler.APIException;
 import br.com.fazendapoedeiras.ovosgalinhas.ovos.aplication.repository.RegistroDeOvosRepository;
 import br.com.fazendapoedeiras.ovosgalinhas.ovos.domain.RegistroDeOvos;
 import lombok.RequiredArgsConstructor;
@@ -30,6 +32,16 @@ public class RegistroDeOvosInfraRepository implements RegistroDeOvosRepository {
 		var todosRegistroDeOvos = registroDeOvosSpringDataJPARepository.findByIdGalinha(idGalinha);
 		log.info("[finaliza]RegistroDeOvosInfraRepository - buscaRegistrosDeOvosDaGalinhaComId");
 		return todosRegistroDeOvos;
+	}
+
+	@Override
+	public RegistroDeOvos buscaRegistroDeOvos(UUID idRegistroDeOvos) {
+		log.info("[inicia]RegistroDeOvosInfraRepository - buscaRegistroDeOvos");
+		var registroDeOvos = registroDeOvosSpringDataJPARepository.findById(idRegistroDeOvos)
+				.orElseThrow(() -> APIException
+						.build(HttpStatus.NOT_FOUND, "Nenhum Registro de Ovos foi encontrado pra esssa galinha"));
+		log.info("[inicia]RegistroDeOvosInfraRepository - buscaRegistroDeOvos");
+		return registroDeOvos;
 	}
 
 }
