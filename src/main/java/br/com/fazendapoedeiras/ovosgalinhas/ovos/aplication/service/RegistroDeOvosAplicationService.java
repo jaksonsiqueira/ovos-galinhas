@@ -9,6 +9,7 @@ import br.com.fazendapoedeiras.ovosgalinhas.galinha.application.service.GalinhaS
 import br.com.fazendapoedeiras.ovosgalinhas.ovos.aplication.api.RegistroDeOvosGalinhaListResponse;
 import br.com.fazendapoedeiras.ovosgalinhas.ovos.aplication.api.RegistroDeOvosRequest;
 import br.com.fazendapoedeiras.ovosgalinhas.ovos.aplication.api.RegistroDeOvosResponse;
+import br.com.fazendapoedeiras.ovosgalinhas.ovos.aplication.repository.RegistroDeOvosRepository;
 import br.com.fazendapoedeiras.ovosgalinhas.ovos.domain.RegistroDeOvos;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;

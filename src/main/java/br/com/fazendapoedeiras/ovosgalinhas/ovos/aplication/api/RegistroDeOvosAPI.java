@@ -25,4 +25,10 @@ public interface RegistroDeOvosAPI {
 	@GetMapping
 	@ResponseStatus(code = HttpStatus.OK)
 	List<RegistroDeOvosGalinhaListResponse> getTodasRegistroDeOvosGalinhaComId(@PathVariable UUID idGalinha);
+	
+	@GetMapping(value = "/{idRegistroDeOvos}")
+	@ResponseStatus(code = HttpStatus.OK)
+	RegistroDeOvosDetalhadoResponse getRegistroDeOvosPorId(@PathVariable UUID idGalinha, 
+			@PathVariable UUID idRegistroDeOvos);
 }
+

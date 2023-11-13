@@ -6,7 +6,7 @@ import java.util.UUID;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Repository;
 
-import br.com.fazendapoedeiras.ovosgalinhas.galinha.application.api.GalinhaRepository;
+import br.com.fazendapoedeiras.ovosgalinhas.galinha.application.repository.GalinhaRepository;
 import br.com.fazendapoedeiras.ovosgalinhas.galinha.domain.Galinha;
 import br.com.fazendapoedeiras.ovosgalinhas.handler.APIException;
 import lombok.RequiredArgsConstructor;

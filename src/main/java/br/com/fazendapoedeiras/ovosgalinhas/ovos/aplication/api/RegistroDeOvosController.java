@@ -33,4 +33,12 @@ public class RegistroDeOvosController implements RegistroDeOvosAPI {
 		return registrosDeOvosDaGalinha;
 	}
 
+	@Override
+	public RegistroDeOvosDetalhadoResponse getRegistroDeOvosPorId(UUID idGalinha, UUID idRegistroDeOvos) {
+		log.info("[inicia]RegistroDeOvosController - getRegistroDeOvosPorId");
+		log.info("[idGalinha]{} - [idRegistroDeOvos]{}", idGalinha, idRegistroDeOvos);
+		log.info("[finaliza]RegistroDeOvosController - getRegistroDeOvosPorId");
+		return null;
+	}
+
 }

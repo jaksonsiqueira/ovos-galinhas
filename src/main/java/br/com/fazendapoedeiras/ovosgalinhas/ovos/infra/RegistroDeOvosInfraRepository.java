@@ -5,7 +5,7 @@ import java.util.UUID;
 
 import org.springframework.stereotype.Repository;
 
-import br.com.fazendapoedeiras.ovosgalinhas.ovos.aplication.service.RegistroDeOvosRepository;
+import br.com.fazendapoedeiras.ovosgalinhas.ovos.aplication.repository.RegistroDeOvosRepository;
 import br.com.fazendapoedeiras.ovosgalinhas.ovos.domain.RegistroDeOvos;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;

@@ -7,9 +7,9 @@ import org.springframework.stereotype.Service;
 
 import br.com.fazendapoedeiras.ovosgalinhas.galinha.application.api.GalinhaDetalhadaResponse;
 import br.com.fazendapoedeiras.ovosgalinhas.galinha.application.api.GalinhaListResponse;
-import br.com.fazendapoedeiras.ovosgalinhas.galinha.application.api.GalinhaRepository;
 import br.com.fazendapoedeiras.ovosgalinhas.galinha.application.api.GalinhaRequest;
 import br.com.fazendapoedeiras.ovosgalinhas.galinha.application.api.GalinhaResponse;
+import br.com.fazendapoedeiras.ovosgalinhas.galinha.application.repository.GalinhaRepository;
 import br.com.fazendapoedeiras.ovosgalinhas.galinha.domain.Galinha;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;

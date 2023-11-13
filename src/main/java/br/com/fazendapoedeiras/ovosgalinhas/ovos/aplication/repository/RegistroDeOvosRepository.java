@@ -1,4 +1,4 @@
-package br.com.fazendapoedeiras.ovosgalinhas.ovos.aplication.service;
+package br.com.fazendapoedeiras.ovosgalinhas.ovos.aplication.repository;
 
 import java.util.List;
 import java.util.UUID;
