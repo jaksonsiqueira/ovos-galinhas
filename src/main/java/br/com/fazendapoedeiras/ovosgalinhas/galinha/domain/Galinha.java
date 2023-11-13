@@ -24,7 +24,7 @@ import lombok.ToString;
 public class Galinha {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "idGalinha", updatable = false, unique = true, nullable = false)
+	@Column(columnDefinition = "uuid", name = "idGalinha", updatable = false, unique = true, nullable = false)
 	private UUID idGalinha;
 	@NotBlank
 	private String nomeGalinha;
