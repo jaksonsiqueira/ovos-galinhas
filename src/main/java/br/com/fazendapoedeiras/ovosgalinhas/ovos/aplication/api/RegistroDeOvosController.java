@@ -46,6 +46,7 @@ public class RegistroDeOvosController implements RegistroDeOvosAPI {
 	public void deletaRegistroDeOvosPorId(UUID idGalinha, UUID idRegistroDeOvos) {
 		log.info("[inicia]RegistroDeOvosController - deletaRegistroDeOvosPorId");
 		log.info("[idGalinha]{} - [idRegistroDeOvos]{}", idGalinha, idRegistroDeOvos);
+		registroDeOvosService.deletaRegistroDeOvosPorId(idGalinha,idRegistroDeOvos);
 		log.info("[finaliza]RegistroDeOvosController - deletaRegistroDeOvosPorId");
 		
 	}

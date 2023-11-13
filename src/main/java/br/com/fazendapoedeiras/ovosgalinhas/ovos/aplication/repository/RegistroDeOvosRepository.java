@@ -10,5 +10,6 @@ public interface RegistroDeOvosRepository {
 	RegistroDeOvos salvaRegistroDeOvos(RegistroDeOvos registroDeOvos);
 	List<RegistroDeOvos> buscaRegistrosDeOvosDaGalinhaComId(UUID idGalinha);
 	RegistroDeOvos buscaRegistroDeOvos(UUID idRegistroDeOvos);
+	void deletaRgistroDeOvos(RegistroDeOvos registroDeOvos);
 
 }
