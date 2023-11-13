@@ -40,7 +40,7 @@ public interface RegistroDeOvosAPI {
 	
 	@PatchMapping(value = "/{idRegistroDeOvos}")
 	@ResponseStatus(code = HttpStatus.NO_CONTENT)
-	RegistroDeOvosResponse patchRegistroDeOvosPorId(@PathVariable UUID idGalinha, 
+	void patchRegistroDeOvosPorId(@PathVariable UUID idGalinha, 
 			@PathVariable UUID idRegistroDeOvos,
 			@Valid @RequestBody RegistroDeOvosRequest registroDeOvosRequest);
 }

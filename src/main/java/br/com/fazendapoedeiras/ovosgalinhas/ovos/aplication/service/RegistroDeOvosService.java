@@ -14,6 +14,7 @@ public interface RegistroDeOvosService {
 	List<RegistroDeOvosGalinhaListResponse> buscaRegistrosDeOvosDaGalinhaComId(UUID idGalinha);
 	RegistroDeOvosDetalhadoResponse buscaRegistroDeOvosDaGalinhaComId(UUID idGalinha, UUID idRegistroDeOvos);
 	void deletaRegistroDeOvosPorId(UUID idGalinha, UUID idRegistroDeOvos);
+	void patchRegistroDeOvos(UUID idGalinha, UUID idRegistroDeOvos, RegistroDeOvosRequest registroDeOvosRequest);
 	
 
 }
